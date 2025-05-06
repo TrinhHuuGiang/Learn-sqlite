@@ -63,8 +63,10 @@
                 - Syntax: `LIMIT` + `number line` + `OFFSET` + `number line ignore before input table`
 
     2. *Insert* new data to table:
-        - Syntax: `INSERT` + `INTO` + `table_name` + `(AS + alias)` +  
+        - Syntax 1: `INSERT` + `INTO` + `table_name` + `(AS + alias)` +  
         `( [col1], [col2], ... )` + `VALUES` + `( value_col1, value_col2, ... )` + `(other_values)` +  `;`
+        - Syntax 2: `INSERT` + `INTO` + `table_name` + `(AS + alias)` +  
+        `( [col1], [col2], ... )` + `SELECT` + ... + `;`
         - Optional `(AS + alias)`
 
     3. *Update* data in table:

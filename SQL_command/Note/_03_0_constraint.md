@@ -34,7 +34,8 @@
 
 
 5. PRIMARY KEY (**only 1 each table**)
-- `PRIMARY KEY` = `UNIQUE` + `NOT NULL`
+- `PRIMARY KEY` = `UNIQUE` + `NOT NULL` + unique for 1 table
+- [Readme](./_06_0_key.md) How to add primary key more than 1 column
 
 ## How to use
 - When create a table, these constrain will apply for each column
