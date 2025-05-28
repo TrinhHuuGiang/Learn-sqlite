@@ -99,4 +99,16 @@
 ## Transaction Control Language (TCL)
 - `TCL` is command script support `DML` each working session
 - include: `BEGIN`, `SAVEPOINT` ,  `RELEASE`, `ROLLBACK`, `ROLLBACK TO`, `COMMIT`
+- [refer](https://sqlite.org/lang_savepoint.html)
 
+1. `BEGIN` - `COMMIT`
+	- Start a **transaction**, init an area can `savepoint`, query, `release`, `rollback to`, `commit`
+	- End **transaction** and save all queries data to database
+		+ data only save when `COMMIT`
+2. `SAVEPOINT`, `ROLLBACK` and `RELEASE`
+	- Query data after a `SAVEPOINT` will clean when call  `ROLLBACK TO` + `savepoin_name`
+	- Special when only call `ROLLBACK` -> rollback to `BEGIN` and clean all transaction, savepoint
+	- `RELEASE` use to free a `SAVEPOINT` after use
+	- **Note:**
+		- Before `COMMIT` any data in transaction is raw
+		- Call `ROLLBACK` if feel transaction need to cancel then `COMMIT` to end
