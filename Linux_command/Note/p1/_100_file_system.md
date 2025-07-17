@@ -3,7 +3,7 @@ Everything in linux is a file
 - Root folder: `/`
 
 ## Common folder in Root
-1. binary file, basic program [bin]()
+1. binary file, basic system program [bin]()
 2. boot file, kernel [boot]()
 3. system config files [etc]
 4. hardware descript files [dev]

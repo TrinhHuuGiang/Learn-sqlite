@@ -48,4 +48,6 @@
 - Read n row last in file: [tail]()
 
 
-### Change owner file/folder
+### Change rule/owner file/folder
+- Change owner: [chown](./_001_user_group_rule.md#2-change-ownerrule)
+- Change rule: [chmod](./_001_user_group_rule.md#2-change-ownerrule)

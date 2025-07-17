@@ -20,8 +20,36 @@
 - `adduser username`: add new user with `username`
 - `deluser username`: delelte user with `username`
 - `passwd username`: change user password
-
+- `usermod -aG group_1,group_2 username`: add user to some new groups, if missing `-a` will clean all old groups
 
 <br><hr><br>
 
+## 2. Change owner/rule
+- Note: use sudo if can't execute change
+- To see rule set of a file/folder type: `ls -la file_folder_name`
+    ``` bash
+    ls -la cert_chain.pem 
+    
+    -rw-r--r-- 1 giangtrinh giangtrinh 3631 Jun 23 11:24 cert_chain.pem
+    ^^^^^^^^^^ ^      ^          ^       ^         ^
+    |||||||||| link owner      group  size(Byte) date_modify
+    0123123123
+    ||  |  └─ others (rwx)
+    ||  └─ group (rwx)
+    |└─ user (rwx - read,write,execute)
+    └─ type(`-` is normal file, `d` is directory, ...)
+
+- Chage owner type: 
+    - `chown newuser.newgroup file_folder_name` <- change new ower + group
+    - `chown newuser file_folder_name` <- change new owner
+    - `chown .newgroup file_folder_name` <- change new group
+    ``` bash
+    chown guest cert_chain.pem
+
+    -rw-r--r-- 1 guest giangtrinh 3631 Jun 23 11:24 cert_chain.pem
+
+<br><hr><br>
+
+- Change rule of file:
+    
 
