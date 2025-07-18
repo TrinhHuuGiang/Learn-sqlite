@@ -51,5 +51,17 @@
 <br><hr><br>
 
 - Change rule of file:
-    
+    - `chmod u+w file_folder_name` <- add write permission for userowner
+    - `chmod g+w file_folder_name` <- add write permission for groupowner
+    - `chmod o+w file_folder_name` <- add write permission for others
+    - similar with `u+r`, `u+x`, ...
+    - faster: `chmod u+rwx,g+rwx,o+rwx file_folder_name` ...
+    ---
+    - otherwise use -w,-r,-x to remove permissions
 
+    --- 
+    - another setup:
+        - `rwx` == 3 bit from (000 - 111) == Decimal from 0 - 7
+        ```bash
+        Ex: chmode 753 file_folder_name = `rwx` `r-x` `-wx`
+                                         user   group others
