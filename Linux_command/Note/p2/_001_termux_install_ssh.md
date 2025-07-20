@@ -1,6 +1,7 @@
 # Test on
 - server: Android version >=5 and Limux Termux CLI (download newest from [Github](https://github.com/termux/termux-app/releases))
-- client: Ubuntu WSL
+- client: Ubuntu WSL (Window)
+    - Another choice: Juicessh (Android app) or Ubuntu (Linux), ...
 - DNS: DuckDNS
 - Router port: 1024
 - Server port: 1024 <= Android refuse open port 0 - 1023 if not root
