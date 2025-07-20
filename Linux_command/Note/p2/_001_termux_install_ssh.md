@@ -115,4 +115,4 @@
 ### Connect
 - Type `ssh -p 1024 -i key_link username@IP_or_DNS` to login server `Termux`
     - Example: `ssh -p 1024 -i ~/key_gen/termux_sv1_rsa u0_a75@giangtrinh.duckdns.org`
-    -> Very farst (no login, system auto pulic key, exchange, challenge, setup session)
+    -> Very fast (no login, system auto pulic key, exchange, challenge, setup session)
